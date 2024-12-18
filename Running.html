@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Running - My Hobby</title>
+
+    <style>
+      body {
+        background: rgb(20, 164, 213);
+      }
+      h1 {
+        font-family: "Times New Roman", Times, serif;
+        text-align: center;
+      }
+      h2 {
+        font-family: "Times New Roman", Times, serif;
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+        text-align: center;
+      }
+      p {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: center;
+      }
+      button {
+        font-family: "Times New Roman", Times, serif;
+        display: block;
+        margin: 10px auto;
+        border: 1px solid white;
+        background-color: lightblue;
+        font-size: 16px;
+        border-radius: 6px;
+        padding: 5px 5px;
+        transition: all 150ms ease-in-out;
+        text-align: center;
+      }
+      button:hover {
+        background-color: darkblue;
+        color: white;
+        cursor: pointer;
+        padding: 8px;
+      }
+
+      .container {
+        margin: 0 auto;
+        max-width: 600px;
+        background-color: lightskyblue;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      footer {
+        text-align: center;
+        margin: 10px 0;
+        color: white;
+        font-size: 18px;
+      }
+      .theme-button {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 12px;
+        background-color: darkblue;
+        color: white;
+        padding: 8px;
+      }
+      .theme-button:hover {
+        color: black;
+        background-color: lightskyblue;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 300px 300px;
+      }
+      .grid img {
+        width: 290px;
+        height: 180px;
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+      }
+      .grid img:hover {
+        filter: contrast(80%);
+        transform: scale(1.2);
+      }
+      .dark {
+        background-color: rgb(0, 0, 41);
+        color: white;
+      }
+      .dark .container {
+        background-color: rgb(0, 0, 64);
+      }
+      .dark a {
+        color: white;
+      }
+      .dark button {
+        background-color: darkblue;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-button">Change Theme</button>
+
+    <div class="container">
+      <h1>Running</h1>
+      <h2>My favorite hobby!</h2>
+      <div class="grid">
+        <a href="https://en.wikipedia.org/wiki/Running " target=" _blank">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/148/983/original/run.jpeg?1730296225"
+            alt=""
+          />
+        </a>
+        <img
+          src=" https://s3.amazonaws.com/shecodesio-production/uploads/files/000/148/982/original/images.jpeg?1730296132"
+          alt=" "
+        />
+        <img
+          src=" https://s3.amazonaws.com/shecodesio-production/uploads/files/000/148/990/original/trail.jpeg?1730304347"
+          alt=""
+        />
+        <img
+          src=" https://s3.amazonaws.com/shecodesio-production/uploads/files/000/148/981/original/run-or-walk-1-1.jpg?1730296055"
+          alt=""
+        />
+      </div>
+      <p>
+        Running is fun and does not require any special equipment to do it. When
+        running, the muscles, lungs, brain, heart and other organs get better,
+        keeping a person fit and active. The exercise is known to be good for
+        health; it helps breathing and heartbeat, reduces stress and burns
+        calories. My personal favorite running trails are in parks, surrounded
+        by nature. However, there are many different forms of running, including
+        jogging, sprinting and long-distance marathons.
+      </p>
+
+      <button
+        onclick="window.open('https://runtogether.co.uk/group-running/find-a-runtogether-group-run?','_blank');"
+      >
+        Join a local run club
+      </button>
+    </div>
+    <footer>Coded by Rianna Modi</footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
